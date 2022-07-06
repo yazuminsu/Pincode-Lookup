@@ -1,0 +1,57 @@
+<apex:page controller="PincodeController" docType="html-5.0" lightningStylesheets="true">
+   <apex:form >
+      <apex:pageBlock>
+
+         <apex:panelGroup>
+            <apex:input type="number" value="{!pincode}" id="thePincode" />
+            <apex:commandButton action="{!doSearch}" value="Get Record" reRender="result"/>
+         </apex:panelGroup>
+
+         <apex:pageBlockSection title="Post Offices" id="result">
+            <apex:pageBlockTable value="{!PostOffice}" var="po">
+               <apex:column>
+                  <apex:facet name="header">Name</apex:facet>
+                  {!po.Name}
+               </apex:column>
+               <apex:column>
+                  <apex:facet name="header">Description</apex:facet>
+                  {!po.Description__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">Branch Type</apex:facet>
+                  {!po.Branch_Type__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">Delivery Status</apex:facet>
+                  {!po.Delivery_Status__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">Circle</apex:facet>
+                  {!po.Circle__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">District</apex:facet>
+                  {!po.District__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">Division</apex:facet>
+                  {!po.Division__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">Region</apex:facet>
+                  {!po.Region__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">Block</apex:facet>
+                  {!po.Block__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">State</apex:facet>
+                  {!po.State__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">Country</apex:facet>
+                  {!po.Country__c}
+               </apex:column>            <apex:column>
+                  <apex:facet name="header">Pincode</apex:facet>
+                  {!po.Pincode__c}
+               </apex:column>
+            </apex:pageBlockTable>
+            <br></br>
+            <apex:messages/>
+         </apex:pageBlockSection>
+
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>
