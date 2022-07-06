@@ -2,18 +2,20 @@
    <apex:form >
       <apex:pageBlock>
 
-         <apex:panelGroup>
-            <apex:input type="number" value="{!pincode}" id="thePincode" />
-            <apex:commandButton action="{!doSearch}" value="Get Record" reRender="result"/>
-         </apex:panelGroup>
+				<apex:pageBlockSection>
+					<apex:panelGroup>
+							<apex:input type="number" value="{!pincode}" id="thePincode" />
+							<apex:commandButton action="{!doSearch}" value="Get Record" reRender="result"/>
+					</apex:panelGroup>
+				</apex:pageBlockSection>
 
          <apex:pageBlockSection title="Post Offices" id="result">
-            <apex:pageBlockTable style="width:250%" value="{!PostOffice}" var="po">
-               <apex:column>
+            <apex:pageBlockTable style="width:260%" value="{!PostOffice}" var="po">
+               <apex:column >
                   <apex:facet name="header">Name</apex:facet>
                   {!po.Name}
                </apex:column>
-               <apex:column>
+               <apex:column colspan="1" >
                   <apex:facet name="header">Description</apex:facet>
                   {!po.Description__c}
                </apex:column>            

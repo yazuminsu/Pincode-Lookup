@@ -46,11 +46,8 @@ public with sharing class PincodeCallout {
                 pOffices.add(y);    
             }
         }
-        try {
-            insert pOffices;
-        } catch (DmlException e) {
-            ApexPages.addMessages(e);
-        }
+
+        insert pOffices;
 
         return pOffices;
 
