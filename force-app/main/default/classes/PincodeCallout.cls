@@ -6,8 +6,7 @@ public with sharing class PincodeCallout {
         List<Post_Office__c> pOffices = new List<Post_Office__c>();
         List<Pincode_Wrapper.PostOffice> pwo = new List<Pincode_Wrapper.PostOffice>();
 
-        APICallout__mdt callout = [SELECT Id, Endpoint__c FROM APICallout__mdt
-                                    WHERE DeveloperName = 'StopPincodes'];
+        APICallout__mdt callout = APICallout__mdt.getInstance('StopPincodes') ;
         String endPoint = callout.Endpoint__c + pincode;
 
         Http http = new Http();
