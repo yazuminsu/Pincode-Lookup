@@ -1,6 +1,8 @@
 public with sharing class PincodeController {
 
+    @testVisible
     Integer pincode;
+    @testVisible
     List<Post_Office__c> result;
 
     public List<Post_Office__c> getPostOffice(){
