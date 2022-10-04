@@ -1,18 +1,11 @@
-# Salesforce DX Project: Next Steps
+# Mini Project
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Create a Visualforce page which should be able to make REST callouts to India post endpoint to show the results of a pincode in a tabular format.
 
-## How Do You Plan to Deploy Your Changes?
+Whenever a callout is made to the endpoint, results from the callout should be saved in a custom object for future reference.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+When user enters a pincode for which results are already available in the custom object, do not make a new callout but rather show the results from the custom object.
 
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Endpoint for integration: (https://api.postalpincode.in/pincode/{PINCODE})
+Sample pincodes: 110009, 110085, 110092, 201301
+Sample REST request: (https://api.postalpincode.in/pincode/110085)
